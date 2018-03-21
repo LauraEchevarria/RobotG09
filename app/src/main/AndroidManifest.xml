@@ -9,13 +9,36 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".view.SplashscreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name=".view.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".view.RemotoActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".view.ComunicacionActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".view.AcelerometroActivity"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity android:name=".view.LaberintoActivity"
+            android:screenOrientation="landscape">
+        </activity>
+
+        <service
+            android:name=".data.communication.CommunicationService"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>

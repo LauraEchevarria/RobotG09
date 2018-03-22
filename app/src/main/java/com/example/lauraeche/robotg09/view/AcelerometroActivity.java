@@ -27,12 +27,12 @@ public class AcelerometroActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         Fragment fragment = manager.findFragmentByTag(ACCELEROMETER_FRAGMENT);
         if(fragment == null){
-            fragment = MainFragment.newInstance();
+            fragment = AcelerometroFragment.newInstance();
         }
 
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.setCustomAnimations(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
-        transaction.replace(R.id.activity_main_container,fragment,ACCELEROMETER_FRAGMENT);
+        transaction.replace(R.id.activity_accelerometer_container,fragment,ACCELEROMETER_FRAGMENT);
         transaction.commit();
 
     }

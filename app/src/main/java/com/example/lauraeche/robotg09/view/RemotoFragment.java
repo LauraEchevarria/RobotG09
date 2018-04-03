@@ -56,15 +56,10 @@ public class RemotoFragment extends Fragment {
 
     private void bindViews(View v){
         //BOTÓN ATRÁS
-        btn_back = v.findViewById(R.id.btn_back);
-        btn_back.setText(GeneralConstants.BTN_BACK_TEXT);
-        btn_back.setHeight(GeneralConstants.BTN_BACK_HEIGHT);
-        btn_back.setWidth(GeneralConstants.BTN_BACK_WIDTH);
-        //TODO: btn_back.setBackground des de código para que todos los botones sean iguales
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {closeActivity();}
-        });
+        //TODO: Esta función debería hacerse general -> GeneralViewModel
+        create_btn_back(v); //TODO: como llamar a la función de GeneralViewModel
+
+
 
 
         //BOTONES MARCHAS
@@ -84,7 +79,18 @@ public class RemotoFragment extends Fragment {
     }
 
     public void closeActivity(){
-        //TODO: Crear el botón de atrás genérico, para todas las Activities != MAIN
         startActivity(new Intent(getActivity(), MainActivity.class));
     }
+
+    private void create_btn_back(View v){
+        btn_back = v.findViewById(R.id.btn_back);
+        btn_back.setText(GeneralConstants.BTN_BACK_TEXT);
+        btn_back.setHeight(GeneralConstants.BTN_BACK_HEIGHT);
+        btn_back.setWidth(GeneralConstants.BTN_BACK_WIDTH);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {closeActivity();}
+        });
+    }
+
 }

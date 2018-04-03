@@ -35,14 +35,5 @@ public class RemotoViewModel extends ViewModel implements Repository.RepositoryC
 
 
 
-    /*-------------------------- Repository Callbacks -----------------------------*/
-   /* @Override
-    public void onSecondsUpdate(int seconds) {
 
-    }
-
-    @Override
-    public void onServiceStopped() {
-
-    }*/
 }

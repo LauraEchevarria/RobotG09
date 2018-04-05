@@ -29,6 +29,7 @@ public class SplashscreenActivity extends AppCompatActivity {
         Thread background = new Thread() {
             public void run() {
                 try {
+                    //todo: buscar ALTERNATIVA (EL sleep NO EL FARÁ SEMPRE)
                     sleep(SplashConstants.TIME);
                     startActivity(new Intent(SplashscreenActivity.this,MainActivity.class));
                     finish();

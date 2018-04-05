@@ -19,7 +19,7 @@ import com.example.lauraeche.robotg09.viewmodel.RemotoViewModel;
  * Created by Lauraeche on 21/03/2018.
  */
 
-public class RemotoFragment extends Fragment {
+public class RemotoFragment extends BaseFragment {
     private Button btn_back, btn_menos, btn_mas, btn_acelerar;
 
 
@@ -75,7 +75,7 @@ public class RemotoFragment extends Fragment {
     }
 
     private void initViewModel(){
-        viewModel = ViewModelProviders.of(getActivity()).get(RemotoViewModel.class);
+        //viewModel = ViewModelProviders.of(getActivity()).get(RemotoViewModel.class);
     }
 
     public void closeActivity(){
